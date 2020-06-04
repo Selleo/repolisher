@@ -11,6 +11,7 @@ repolisher
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+* [repolisher](#repolisher)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -28,46 +29,19 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`repolisher check [FILE]`](#repolisher-check-file)
-* [`repolisher hello [FILE]`](#repolisher-hello-file)
+* [`repolisher check`](#repolisher-check)
 * [`repolisher help [COMMAND]`](#repolisher-help-command)
-* [`repolisher template-pr [FILE]`](#repolisher-template-pr-file)
+* [`repolisher init [FILE]`](#repolisher-init-file)
+* [`repolisher template-pr`](#repolisher-template-pr)
 
-## `repolisher check [FILE]`
-
-describe the command here
+## `repolisher check`
 
 ```
 USAGE
-  $ repolisher check [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ repolisher check
 ```
 
 _See code: [src/commands/check.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.0/src/commands/check.ts)_
-
-## `repolisher hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ repolisher hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ repolisher hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `repolisher help [COMMAND]`
 
@@ -86,18 +60,27 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
 
-## `repolisher template-pr [FILE]`
+## `repolisher init [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ repolisher template-pr [FILE]
+  $ repolisher init [FILE]
 
 OPTIONS
   -f, --force
   -h, --help       show CLI help
   -n, --name=name  name to print
+```
+
+_See code: [src/commands/init.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.0/src/commands/init.ts)_
+
+## `repolisher template-pr`
+
+```
+USAGE
+  $ repolisher template-pr
 ```
 
 _See code: [src/commands/template-pr.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.0/src/commands/template-pr.ts)_

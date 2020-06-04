@@ -1,0 +1,25 @@
+You already have PR template in Your repository
+[90m# Tasks:[39m
+[90m- [ ] for ex. document templates management[39m
+
+[90m# Added value:[39m
+[90m- [ ] for ex. Users can easier/faster create new documents based on a predefined templates[39m
+
+[90m# JIRA references:[39m
+
+[90m# PR dependency:[39m
+[90m[1] for ex. http://github.com/PullRequest_url[39m
+
+[90m# Testing scenario:[39m
+[90m1. Go there[39m
+[90m2. Do that[39m
+[90m3. etc..[39m
+
+[90m# Preview[39m
+[90mPaste some screenshot to simplify review[39m
+[90m[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)[39m
+
+[90m```diff[39m
+[90m- Don't forget about updating JIRA task with PR #ID, added value information and Testing scenarios[39m
+[90m```[39m
+[90m[39mNo changes between actual and new template

@@ -23,7 +23,7 @@ export function compareTemplates(file: string, newTemplate: string, _equal: bool
 export const checkPRTemplate = () => {
   let equal = true
   let pr_template_exists = false
-  const newTemplate = fs.readFileSync(`${__dirname}/src/files/PULL_REQUEST_TEMPLATE.md`, 'utf-8')
+  const newTemplate = fs.readFileSync(`${__dirname}/files/PULL_REQUEST_TEMPLATE.md`, 'utf-8')
   glob.sync('**/PULL_REQUEST_TEMPLATE.md').forEach(file => {
     pr_template_exists = true
 

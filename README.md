@@ -41,7 +41,7 @@ USAGE
   $ repolisher check
 ```
 
-_See code: [src/commands/check.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.1/src/commands/check.ts)_
+_See code: [src/commands/check.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.2/src/commands/check.ts)_
 
 ## `repolisher help [COMMAND]`
 
@@ -67,7 +67,7 @@ USAGE
   $ repolisher init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.1/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.2/src/commands/init.ts)_
 
 ## `repolisher template-pr`
 
@@ -76,6 +76,6 @@ USAGE
   $ repolisher template-pr
 ```
 
-_See code: [src/commands/template-pr.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.1/src/commands/template-pr.ts)_
+_See code: [src/commands/template-pr.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.2/src/commands/template-pr.ts)_
 <!-- commandsstop -->
 # repolisher

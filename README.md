@@ -31,7 +31,7 @@ USAGE
 <!-- commands -->
 * [`repolisher check`](#repolisher-check)
 * [`repolisher help [COMMAND]`](#repolisher-help-command)
-* [`repolisher init [FILE]`](#repolisher-init-file)
+* [`repolisher init`](#repolisher-init)
 * [`repolisher template-pr`](#repolisher-template-pr)
 
 ## `repolisher check`
@@ -60,18 +60,11 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
 
-## `repolisher init [FILE]`
-
-describe the command here
+## `repolisher init`
 
 ```
 USAGE
-  $ repolisher init [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ repolisher init
 ```
 
 _See code: [src/commands/init.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.0/src/commands/init.ts)_

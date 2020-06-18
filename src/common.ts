@@ -23,7 +23,12 @@ export function compareTemplates(file: string, newTemplate: string, _equal: bool
 export const checkPRTemplate = () => {
   let equal = true
   let pr_template_exists = false
-  const newTemplate = fs.readFileSync(`${__dirname}/files/PULL_REQUEST_TEMPLATE.md`, 'utf-8')
+  const templatePath = `${__dirname}/files/PULL_REQUEST_TEMPLATE.md`
+
+  if (!fs.existsSync(templatePath)) {
+    return console.log('PR Template file is missing')
+  }
+  const newTemplate = fs.readFileSync(templatePath, 'utf-8')
   glob.sync('**/PULL_REQUEST_TEMPLATE.md').forEach(file => {
     pr_template_exists = true
 

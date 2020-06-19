@@ -20,7 +20,7 @@ $ npm install -g repolisher
 $ repolisher COMMAND
 running command...
 $ repolisher (-v|--version|version)
-repolisher/0.0.2 darwin-x64 node-v10.17.0
+repolisher/0.0.3 darwin-x64 node-v12.16.3
 $ repolisher --help [COMMAND]
 USAGE
   $ repolisher COMMAND
@@ -41,7 +41,7 @@ USAGE
   $ repolisher check
 ```
 
-_See code: [src/commands/check.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.2/src/commands/check.ts)_
+_See code: [src/commands/check.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/check.ts)_
 
 ## `repolisher help [COMMAND]`
 
@@ -58,7 +58,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
 ## `repolisher init`
 
@@ -67,7 +67,7 @@ USAGE
   $ repolisher init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.2/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/init.ts)_
 
 ## `repolisher template-pr`
 
@@ -76,6 +76,6 @@ USAGE
   $ repolisher template-pr
 ```
 
-_See code: [src/commands/template-pr.ts](https://github.com/RobertMrowiec/repolisher/blob/v0.0.2/src/commands/template-pr.ts)_
+_See code: [src/commands/template-pr.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/template-pr.ts)_
 <!-- commandsstop -->
 # repolisher

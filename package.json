@@ -42,7 +42,8 @@
     "/bin",
     "/lib",
     "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/oclif.manifest.json",
+    "/src/files"
   ],
   "homepage": "https://github.com/Selleo/repolisher",
   "keywords": [

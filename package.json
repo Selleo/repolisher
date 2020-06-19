@@ -5,7 +5,7 @@
   "bin": {
     "repolisher": "./bin/run"
   },
-  "bugs": "https://github.com/RobertMrowiec/repolisher/issues",
+  "bugs": "https://github.com/Selleo/repolisher/issues",
   "dependencies": {
     "@oclif/command": "^1.6.1",
     "@oclif/config": "^1.15.1",
@@ -44,7 +44,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/RobertMrowiec/repolisher",
+  "homepage": "https://github.com/Selleo/repolisher",
   "keywords": [
     "oclif"
   ],
@@ -57,7 +57,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "RobertMrowiec/repolisher",
+  "repository": "Selleo/repolisher",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

@@ -1,0 +1,1 @@
+{"version":"0.0.3","commands":{"check":{"id":"check","pluginName":"repolisher","pluginType":"core","aliases":[],"flags":{},"args":[]},"init":{"id":"init","pluginName":"repolisher","pluginType":"core","aliases":[],"flags":{},"args":[]},"template-pr":{"id":"template-pr","pluginName":"repolisher","pluginType":"core","aliases":[],"flags":{},"args":[]}}}

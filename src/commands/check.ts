@@ -1,5 +1,5 @@
-import {Command} from '@oclif/command'
-import {checkPRTemplate} from '../common'
+import { Command } from '@oclif/command'
+import { checkPRTemplate } from '../common'
 
 export default class Check extends Command {
   async run() {
@@ -17,12 +17,12 @@ export default class Check extends Command {
     let counter = 1
     return Promise.all(availableOptions.map(async option => {
       this.log(`Checking ${counter} of ${availableOptions.length}`)
-      const {name} = option
+      const { name } = option
       counter++
       if (name === 'PR template')
         await checkPRTemplate()
     })).then(() => {
-      if (availableOptions.filter(option => option.status === true).length === availableOptions.length) {
+      if (availableOptions.filter(option => option.status).length === availableOptions.length) {
         this.log('Check finished')
       }
     })

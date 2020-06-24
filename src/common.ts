@@ -3,6 +3,7 @@ import * as colors from 'colors/'
 import * as fs from 'fs'
 import * as glob from 'glob'
 import * as inquirer from 'inquirer'
+import * as path from 'path'
 
 export function compareTemplates(file: string, newTemplate: string, _equal: boolean) {
   const actualTemplate = fs.readFileSync(file, 'utf-8')
@@ -20,11 +21,20 @@ export function compareTemplates(file: string, newTemplate: string, _equal: bool
   return _equal
 }
 
+const findExistingPRTemplate = () => glob.sync(path.join('.github', 'PULL_REQUEST_TEMPLATE.md')).concat(glob.sync(path.join('docs', 'PULL_REQUEST_TEMPLATE.md'))).concat(glob.sync('PULL_REQUEST_TEMPLATE.md'))
+
 export const checkPRTemplate = () => {
   let equal = true
   let pr_template_exists = false
-  const newTemplate = fs.readFileSync(`${__dirname}/files/PULL_REQUEST_TEMPLATE.md`, 'utf-8')
-  glob.sync('**/PULL_REQUEST_TEMPLATE.md').forEach(file => {
+  const newPullRequestTemplatePath = path.join('src', 'files', 'NEW_PULL_REQUEST_TEMPLATE.md')
+
+  if (!fs.existsSync(newPullRequestTemplatePath)) {
+    return console.log('PR Template file is missing')
+  }
+  const newTemplate = fs.readFileSync(newPullRequestTemplatePath, 'utf-8')
+  const prTemplates = findExistingPRTemplate()
+
+  prTemplates.forEach(file => {
     pr_template_exists = true
 
     console.log('You already have PR template in Your repository')

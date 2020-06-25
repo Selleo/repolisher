@@ -5,11 +5,7 @@ import * as glob from 'glob'
 import * as inquirer from 'inquirer'
 import * as path from 'path'
 
-export function compareTemplates(
-  file: string,
-  newTemplate: string,
-  _equal: boolean
-) {
+export function compareTemplates(file: string, newTemplate: string, _equal: boolean) {
   const actualTemplate = fs.readFileSync(file, 'utf-8')
   const diff = jsdiff.diffChars(actualTemplate, newTemplate)
 
@@ -25,18 +21,18 @@ export function compareTemplates(
 
 const findExistingPRTemplate = () =>
   glob
-  .sync(path.join('.github', 'PULL_REQUEST_TEMPLATE.md'))
-  .concat(glob.sync(path.join('docs', 'PULL_REQUEST_TEMPLATE.md')))
-  .concat(glob.sync('PULL_REQUEST_TEMPLATE.md'))
+    .sync(path.join('.github', 'PULL_REQUEST_TEMPLATE.md'))
+    .concat(glob.sync(path.join('docs', 'PULL_REQUEST_TEMPLATE.md')))
+    .concat(glob.sync('PULL_REQUEST_TEMPLATE.md'))
 
 const findExistingDefaultIssueTemplate = () =>
   glob
-  .sync(path.join('.github', 'issue_template.md'))
-  .concat(glob.sync(path.join('docs', 'issue_template.md')))
-  .concat(glob.sync(path.join('.github', 'ISSUE_TEMPLATE', 'issue_template.md')))
-  .concat(glob.sync(path.join('docs', 'ISSUE_TEMPLATE', 'issue_template.md')))
-  .concat(glob.sync(path.join('ISSUE_TEMPLATE', 'issue_template.md')))
-  .concat(glob.sync('issue_template.md'))
+    .sync(path.join('.github', 'issue_template.md'))
+    .concat(glob.sync(path.join('docs', 'issue_template.md')))
+    .concat(glob.sync(path.join('.github', 'ISSUE_TEMPLATE', 'issue_template.md')))
+    .concat(glob.sync(path.join('docs', 'ISSUE_TEMPLATE', 'issue_template.md')))
+    .concat(glob.sync(path.join('ISSUE_TEMPLATE', 'issue_template.md')))
+    .concat(glob.sync('issue_template.md'))
 
 export const checkPRTemplate = () => {
   let equal = true
@@ -62,53 +58,52 @@ export const checkPRTemplate = () => {
     if (equal) return console.log('No changes between actual and new template')
 
     return inquirer
-    .prompt({
-      name: 'template-pr',
-      type: 'list',
-      message: 'Would You like to update a pull request template?',
-      choices: ['Yes', 'No'],
-      default: 'Yes',
-      suffix: '\n(ctrl + c to exit)',
-    })
-    .then(answer => {
-      if (answer['template-pr'] === 'Yes') {
-        fs.writeFile(file, newTemplate, 'utf-8', err => {
-          return err ?
-            console.log(`Error: ${err}`) :
-            console.log('PR template updated successfully')
-        })
-      }
-    })
+      .prompt({
+        name: 'template-pr',
+        type: 'list',
+        message: 'Would You like to update a pull request template?',
+        choices: ['Yes', 'No'],
+        default: 'Yes',
+        suffix: '\n(ctrl + c to exit)'
+      })
+      .then(answer => {
+        if (answer['template-pr'] === 'Yes') {
+          fs.writeFile(file, newTemplate, 'utf-8', err => {
+            return err
+              ? console.log(`Error: ${err}`)
+              : console.log('PR template updated successfully')
+          })
+        }
+      })
   })
 
   if (!prTemplateExists) {
     return inquirer
-    .prompt({
-      name: 'template-pr',
-      type: 'list',
-      message:
-          'You don`t have a Pull Request Template, Would You like to generate it?',
-      choices: ['Yes', 'No'],
-      default: 'Yes',
-      suffix: '\n(ctrl + c to exit)',
-    })
-    .then(answer => {
-      if (answer['template-pr'] === 'Yes') {
-        fs.mkdir('.github', {recursive: true}, err => {
-          if (err) return console.log(`Error: ${err}`)
-        })
-        fs.writeFile(
-          path.join('.github', 'PULL_REQUEST_TEMPLATE.md'),
-          newTemplate,
-          'utf-8',
-          err => {
-            return err ?
-              console.log(`Error: ${err}`) :
-              console.log('PR template generated successfully')
-          }
-        )
-      }
-    })
+      .prompt({
+        name: 'template-pr',
+        type: 'list',
+        message: 'You don`t have a Pull Request Template, Would You like to generate it?',
+        choices: ['Yes', 'No'],
+        default: 'Yes',
+        suffix: '\n(ctrl + c to exit)'
+      })
+      .then(answer => {
+        if (answer['template-pr'] === 'Yes') {
+          fs.mkdir('.github', { recursive: true }, err => {
+            if (err) return console.log(`Error: ${err}`)
+          })
+          fs.writeFile(
+            path.join('.github', 'PULL_REQUEST_TEMPLATE.md'),
+            newTemplate,
+            'utf-8',
+            err => {
+              return err
+                ? console.log(`Error: ${err}`)
+                : console.log('PR template generated successfully')
+            }
+          )
+        }
+      })
   }
 }
 
@@ -136,52 +131,52 @@ export const checkDefaultIssueTemplate = () => {
     if (equal) return console.log('No changes between actual and new template')
 
     return inquirer
-    .prompt({
-      name: 'template-issue-default',
-      type: 'list',
-      message: 'Would You like to update a Default Issue Template?',
-      choices: ['Yes', 'No'],
-      default: 'Yes',
-      suffix: '\n(ctrl + c to exit)',
-    })
-    .then(answer => {
-      if (answer['template-issue-default'] === 'Yes') {
-        fs.writeFile(file, newTemplate, 'utf-8', err => {
-          return err ?
-            console.log(`Error: ${err}`) :
-            console.log('Default Issue Template updated successfully')
-        })
-      }
-    })
+      .prompt({
+        name: 'template-issue-default',
+        type: 'list',
+        message: 'Would You like to update a Default Issue Template?',
+        choices: ['Yes', 'No'],
+        default: 'Yes',
+        suffix: '\n(ctrl + c to exit)'
+      })
+      .then(answer => {
+        if (answer['template-issue-default'] === 'Yes') {
+          fs.writeFile(file, newTemplate, 'utf-8', err => {
+            return err
+              ? console.log(`Error: ${err}`)
+              : console.log('Default Issue Template updated successfully')
+          })
+        }
+      })
   })
 
   if (!defaultIssueTemplateExists) {
     return inquirer
-    .prompt({
-      name: 'template-issue-default',
-      type: 'list',
-      message:
+      .prompt({
+        name: 'template-issue-default',
+        type: 'list',
+        message:
           'You don`t have a Default Issue Template, Would You like to generate it?',
-      choices: ['Yes', 'No'],
-      default: 'Yes',
-      suffix: '\n(ctrl + c to exit)',
-    })
-    .then(answer => {
-      if (answer['template-issue-default'] === 'Yes') {
-        fs.mkdir(path.join('.github', 'ISSUE_TEMPLATE'), {recursive: true}, err => {
-          if (err) return console.log(`Error: ${err}`)
-        })
-        fs.writeFile(
-          path.join('.github', 'ISSUE_TEMPLATE', 'issue_template.md'),
-          newTemplate,
-          'utf-8',
-          err => {
-            return err ?
-              console.log(`Error: ${err}`) :
-              console.log('Default Issue Template generated successfully')
-          }
-        )
-      }
-    })
+        choices: ['Yes', 'No'],
+        default: 'Yes',
+        suffix: '\n(ctrl + c to exit)'
+      })
+      .then(answer => {
+        if (answer['template-issue-default'] === 'Yes') {
+          fs.mkdir(path.join('.github', 'ISSUE_TEMPLATE'), { recursive: true }, err => {
+            if (err) return console.log(`Error: ${err}`)
+          })
+          fs.writeFile(
+            path.join('.github', 'ISSUE_TEMPLATE', 'issue_template.md'),
+            newTemplate,
+            'utf-8',
+            err => {
+              return err
+                ? console.log(`Error: ${err}`)
+                : console.log('Default Issue Template generated successfully')
+            }
+          )
+        }
+      })
   }
 }

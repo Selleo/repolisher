@@ -113,6 +113,8 @@ export const checkDefaultIssueTemplate = () => {
   let equal = true
   let defaultIssueTemplateExists = false
   const newDefaultIssueTemplatePath = path.join(
+    __dirname,
+    '..',
     'src',
     'files',
     'NEW_DEFAULT_ISSUE_TEMPLATE.md'

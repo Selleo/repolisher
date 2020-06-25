@@ -1,5 +1,5 @@
-import {Command} from '@oclif/command'
-import {checkPRTemplate} from '../common'
+import { Command } from '@oclif/command'
+import { checkPRTemplate } from '../common'
 
 export default class TemplatePr extends Command {
   async run() {

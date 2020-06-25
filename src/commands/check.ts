@@ -6,27 +6,25 @@ export default class Check extends Command {
     interface Option {
       name: string;
       status: boolean;
+      callback: Function;
     }
 
     const availableOptions: Option[] = [
       {
         name: 'PR Template',
         status: false,
+        callback: checkPRTemplate,
       },
       {
         name: 'Default Issue Template',
         status: false,
+        callback: checkDefaultIssueTemplate,
       },
     ]
-    let counter = 1
-    return Promise.all(availableOptions.map(async option => {
-      this.log(`Checking ${counter} of ${availableOptions.length}`)
-      const {name} = option
-      counter++
-      if (name === 'PR Template')
-        await checkPRTemplate()
-      if (name === 'Default Issue Template')
-        await checkDefaultIssueTemplate()
+
+    return Promise.all(availableOptions.map((option, index) => {
+      this.log(`Checking ${index + 1} of ${availableOptions.length}`)
+      return option.callback()
     })).then(() => {
       if (availableOptions.filter(option => {
         console.log(option.status)

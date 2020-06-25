@@ -20,7 +20,7 @@ $ npm install -g repolisher
 $ repolisher COMMAND
 running command...
 $ repolisher (-v|--version|version)
-repolisher/0.0.3 darwin-x64 node-v10.16.3
+repolisher/0.0.3 darwin-x64 node-v12.16.3
 $ repolisher --help [COMMAND]
 USAGE
   $ repolisher COMMAND
@@ -32,6 +32,7 @@ USAGE
 * [`repolisher check`](#repolisher-check)
 * [`repolisher help [COMMAND]`](#repolisher-help-command)
 * [`repolisher init`](#repolisher-init)
+* [`repolisher template-issue-default`](#repolisher-template-issue-default)
 * [`repolisher template-pr`](#repolisher-template-pr)
 
 ## `repolisher check`
@@ -58,7 +59,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
 ## `repolisher init`
 
@@ -68,6 +69,15 @@ USAGE
 ```
 
 _See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/init.ts)_
+
+## `repolisher template-issue-default`
+
+```
+USAGE
+  $ repolisher template-issue-default
+```
+
+_See code: [src/commands/template-issue-default.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/template-issue-default.ts)_
 
 ## `repolisher template-pr`
 

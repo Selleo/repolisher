@@ -2,8 +2,8 @@ import * as fs from 'fs'
 import * as inquirer from 'inquirer'
 import * as path from 'path'
 
-import { findExistingDefaultIssueTemplate } from '@issueTemplate'
-import { compareTemplates } from '@common'
+import { findExistingDefaultIssueTemplate } from '../issueTemplate'
+import { compareTemplates } from '../common'
 
 export const checkDefaultIssueTemplate = () => {
   let equal = true

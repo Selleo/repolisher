@@ -16,7 +16,6 @@
     "diff": "^4.0.2",
     "glob": "^7.1.6",
     "inquirer": "^7.1.0",
-    "module-alias": "^2.2.2",
     "path": "^0.12.7",
     "tslib": "^1.13.0"
   },
@@ -72,10 +71,5 @@
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts",
-  "_moduleAliases": {
-    "@common": "lib/features/common",
-    "@prTemplate": "lib/features/prTemplate",
-    "@issueTemplate": "lib/features/issueTemplate"
-  }
+  "types": "lib/index.d.ts"
 }

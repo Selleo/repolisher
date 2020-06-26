@@ -2,8 +2,8 @@ import * as fs from 'fs'
 import * as inquirer from 'inquirer'
 import * as path from 'path'
 
-import { findExistingPRTemplate } from '@prTemplate'
-import { compareTemplates } from '@common'
+import { findExistingPRTemplate } from '../prTemplate'
+import { compareTemplates } from '../common'
 
 export const checkPRTemplate = () => {
   let equal = true

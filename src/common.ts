@@ -1,9 +1,9 @@
-import { compareTemplates } from '@common'
-import { findExistingPRTemplate, checkPRTemplate } from '@prTemplate'
+import { compareTemplates } from './features/common'
+import { findExistingPRTemplate, checkPRTemplate } from './features/prTemplate'
 import {
   findExistingDefaultIssueTemplate,
   checkDefaultIssueTemplate
-} from '@issueTemplate'
+} from './features/issueTemplate'
 
 export {
   compareTemplates,

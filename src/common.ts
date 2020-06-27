@@ -38,6 +38,8 @@ export const checkPRTemplate = () => {
   let equal = true
   let prTemplateExists = false
   const newPullRequestTemplatePath = path.join(
+    __dirname,
+    '..',
     'src',
     'files',
     'NEW_PULL_REQUEST_TEMPLATE.md'
@@ -111,6 +113,8 @@ export const checkDefaultIssueTemplate = () => {
   let equal = true
   let defaultIssueTemplateExists = false
   const newDefaultIssueTemplatePath = path.join(
+    __dirname,
+    '..',
     'src',
     'files',
     'NEW_DEFAULT_ISSUE_TEMPLATE.md'

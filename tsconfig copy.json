@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "strict": true,
+    "target": "es2017",
+    "baseUrl": ".",
+    "paths": {
+      "@common*": ["src/features/common*"],
+      "@issueTemplate": ["src/features/issueTemplate"],
+      "@prTemplate": ["src/features/prTemplate"],
+      "*": ["*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

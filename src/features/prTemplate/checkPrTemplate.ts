@@ -4,17 +4,11 @@ import * as path from 'path'
 
 import { findExistingPRTemplate } from '../prTemplate'
 import { compareTemplates } from '../common'
+import { newPullRequestTemplatePath } from '../../files/locateDefaultFile'
 
 export const checkPRTemplate = () => {
   let equal = true
   let prTemplateExists = false
-  const newPullRequestTemplatePath = path.join(
-    __dirname,
-    '..',
-    'src',
-    'files',
-    'NEW_PULL_REQUEST_TEMPLATE.md'
-  )
 
   if (!fs.existsSync(newPullRequestTemplatePath)) {
     return console.log('PR Template file is missing')

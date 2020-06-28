@@ -4,17 +4,11 @@ import * as path from 'path'
 
 import { findExistingDefaultIssueTemplate } from '../issueTemplate'
 import { compareTemplates } from '../common'
+import { newDefaultIssueTemplatePath } from '../../files/locateDefaultFile'
 
 export const checkDefaultIssueTemplate = () => {
   let equal = true
   let defaultIssueTemplateExists = false
-  const newDefaultIssueTemplatePath = path.join(
-    __dirname,
-    '..',
-    'src',
-    'files',
-    'NEW_DEFAULT_ISSUE_TEMPLATE.md'
-  )
 
   if (!fs.existsSync(newDefaultIssueTemplatePath)) {
     return console.log('Default Issue Template file is missing')

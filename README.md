@@ -20,7 +20,7 @@ $ npm install -g repolisher
 $ repolisher COMMAND
 running command...
 $ repolisher (-v|--version|version)
-repolisher/0.0.3 darwin-x64 node-v12.16.3
+repolisher/0.0.3 darwin-x64 node-v10.16.3
 $ repolisher --help [COMMAND]
 USAGE
   $ repolisher COMMAND
@@ -59,7 +59,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
 
 ## `repolisher init`
 

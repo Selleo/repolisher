@@ -22,20 +22,12 @@ export default class Check extends Command {
       }
     ]
 
-    return Promise.all(
-      availableOptions.map((option, index) => {
-        this.log(`Checking ${index + 1} of ${availableOptions.length}`)
-        return option.callback()
-      })
-    ).then(() => {
-      if (
-        availableOptions.filter(option => {
-          console.log(option.status)
-          return option.status === true
-        }).length === availableOptions.length
-      ) {
-        this.log('Check finished')
-      }
-    })
+    let index = 1
+    for (const option of availableOptions) {
+      this.log(`Checking ${index} of ${availableOptions.length}`)
+      await option.callback()
+      index++
+    }
+    this.log('Check finished')
   }
 }

@@ -57,9 +57,7 @@ export const checkDefaultIssueTemplate = () => {
       })
       .then(answer => {
         if (answer['template-issue-default'] === 'Yes') {
-          fs.mkdir(path.join('.github', 'ISSUE_TEMPLATE'), { recursive: true }, err => {
-            if (err) return console.log(`Error: ${err}`)
-          })
+          fs.mkdirSync(path.join('.github', 'ISSUE_TEMPLATE'), { recursive: true })
           fs.writeFile(
             path.join('.github', 'ISSUE_TEMPLATE', 'issue_template.md'),
             newTemplate,

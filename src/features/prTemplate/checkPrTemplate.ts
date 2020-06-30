@@ -56,9 +56,7 @@ export const checkPRTemplate = () => {
       })
       .then(answer => {
         if (answer['template-pr'] === 'Yes') {
-          fs.mkdir('.github', { recursive: true }, err => {
-            if (err) return console.log(`Error: ${err}`)
-          })
+          fs.mkdirSync('.github', { recursive: true })
           fs.writeFile(
             path.join('.github', 'PULL_REQUEST_TEMPLATE.md'),
             newTemplate,

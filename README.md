@@ -1,7 +1,4 @@
-repolisher
-==========
-
-
+# repolisher
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/repolisher.svg)](https://npmjs.org/package/repolisher)
@@ -9,12 +6,16 @@ repolisher
 [![License](https://img.shields.io/npm/l/repolisher.svg)](https://github.com/RobertMrowiec/repolisher/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-* [repolisher](#repolisher)
+
+- [Usage](#usage)
+- [Commands](#commands)
+- [repolisher](#repolisher)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g repolisher
 $ repolisher COMMAND
@@ -26,13 +27,18 @@ USAGE
   $ repolisher COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`repolisher check`](#repolisher-check)
-* [`repolisher help [COMMAND]`](#repolisher-help-command)
-* [`repolisher init`](#repolisher-init)
-* [`repolisher template-pr`](#repolisher-template-pr)
+
+- [`repolisher check`](#repolisher-check)
+- [`repolisher help [COMMAND]`](#repolisher-help-command)
+- [`repolisher init`](#repolisher-init)
+- [`repolisher template-issue-default`](#repolisher-template-issue-default)
+- [`repolisher template-pr`](#repolisher-template-pr)
 
 ## `repolisher check`
 
@@ -69,6 +75,15 @@ USAGE
 
 _See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/init.ts)_
 
+## `repolisher template-issue-default`
+
+```
+USAGE
+  $ repolisher template-issue-default
+```
+
+_See code: [src/commands/template-issue-default.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/template-issue-default.ts)_
+
 ## `repolisher template-pr`
 
 ```
@@ -77,5 +92,14 @@ USAGE
 ```
 
 _See code: [src/commands/template-pr.ts](https://github.com/Selleo/repolisher/blob/v0.0.3/src/commands/template-pr.ts)_
+
 <!-- commandsstop -->
+
 # repolisher
+
+# Testing on development:
+
+1. go to repolisher folder
+2. do npm pack
+3. npm install -g '/path/to/repolisher.tgz file'
+4. repolisher check

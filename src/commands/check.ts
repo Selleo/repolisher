@@ -21,7 +21,7 @@ export default class Check extends Command {
         callback: checkDefaultIssueTemplate
       },
       {
-        name: 'Default Issue Template',
+        name: 'License',
         status: false,
         callback: checkLicense
       }

@@ -17,7 +17,7 @@ export const checkLicense = async () => {
   if (isLicenseFileInProject) {
     return inquirer
       .prompt({
-        name: 'template-issue-default',
+        name: 'license-exist',
         type: 'list',
         message: 'License found, Would You like to change License?',
         choices: ['Yes', 'No'],
@@ -25,7 +25,7 @@ export const checkLicense = async () => {
         suffix: '\n(ctrl + c to exit)'
       })
       .then(async answer => {
-        if (answer['template-issue-default'] === 'Yes') {
+        if (answer['license-exist'] === 'Yes') {
           await createLicenseFile(licensesNames, availableLicensesData.data, 'update')
         }
       })

@@ -4,11 +4,14 @@ import {
   findExistingDefaultIssueTemplate,
   checkDefaultIssueTemplate
 } from './features/issueTemplate'
+import { findExistingDefaultLicenseTemplate, checkLicense } from './features/license'
 
 export {
   compareTemplates,
   findExistingPRTemplate,
   findExistingDefaultIssueTemplate,
   checkPRTemplate,
-  checkDefaultIssueTemplate
+  checkDefaultIssueTemplate,
+  checkLicense,
+  findExistingDefaultLicenseTemplate
 }

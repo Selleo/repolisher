@@ -5,6 +5,7 @@ import {
   checkDefaultIssueTemplate
 } from './features/issueTemplate'
 import { findExistingDefaultLicenseTemplate, checkLicense } from './features/license'
+import { checkLabels } from './features/labels'
 
 export {
   compareTemplates,
@@ -13,5 +14,6 @@ export {
   checkPRTemplate,
   checkDefaultIssueTemplate,
   checkLicense,
-  findExistingDefaultLicenseTemplate
+  findExistingDefaultLicenseTemplate,
+  checkLabels
 }

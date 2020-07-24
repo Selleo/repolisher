@@ -21,7 +21,7 @@ $ npm install -g repolisher
 $ repolisher COMMAND
 running command...
 $ repolisher (-v|--version|version)
-repolisher/0.0.10 darwin-x64 node-v12.16.3
+repolisher/0.0.14 darwin-x64 node-v12.16.3
 $ repolisher --help [COMMAND]
 USAGE
   $ repolisher COMMAND
@@ -35,6 +35,7 @@ USAGE
 * [`repolisher check`](#repolisher-check)
 * [`repolisher help [COMMAND]`](#repolisher-help-command)
 * [`repolisher init`](#repolisher-init)
+* [`repolisher labels`](#repolisher-labels)
 * [`repolisher license`](#repolisher-license)
 * [`repolisher template-issue-default`](#repolisher-template-issue-default)
 * [`repolisher template-pr`](#repolisher-template-pr)
@@ -46,7 +47,7 @@ USAGE
   $ repolisher check
 ```
 
-_See code: [src/commands/check.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/check.ts)_
+_See code: [src/commands/check.ts](https://github.com/Selleo/repolisher/blob/v0.0.14/src/commands/check.ts)_
 
 ## `repolisher help [COMMAND]`
 
@@ -72,7 +73,16 @@ USAGE
   $ repolisher init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.0.14/src/commands/init.ts)_
+
+## `repolisher labels`
+
+```
+USAGE
+  $ repolisher labels
+```
+
+_See code: [src/commands/labels.ts](https://github.com/Selleo/repolisher/blob/v0.0.14/src/commands/labels.ts)_
 
 ## `repolisher license`
 
@@ -81,7 +91,7 @@ USAGE
   $ repolisher license
 ```
 
-_See code: [src/commands/license.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/license.ts)_
+_See code: [src/commands/license.ts](https://github.com/Selleo/repolisher/blob/v0.0.14/src/commands/license.ts)_
 
 ## `repolisher template-issue-default`
 
@@ -90,7 +100,7 @@ USAGE
   $ repolisher template-issue-default
 ```
 
-_See code: [src/commands/template-issue-default.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/template-issue-default.ts)_
+_See code: [src/commands/template-issue-default.ts](https://github.com/Selleo/repolisher/blob/v0.0.14/src/commands/template-issue-default.ts)_
 
 ## `repolisher template-pr`
 
@@ -99,7 +109,7 @@ USAGE
   $ repolisher template-pr
 ```
 
-_See code: [src/commands/template-pr.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/template-pr.ts)_
+_See code: [src/commands/template-pr.ts](https://github.com/Selleo/repolisher/blob/v0.0.14/src/commands/template-pr.ts)_
 <!-- commandsstop -->
 
 # repolisher

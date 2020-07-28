@@ -9,8 +9,8 @@ export const createLicenseFile: (
   licensesNames: string[],
   licenses: LicenseType[],
   mode: 'generate' | 'update'
-) => void = (licensesNames, licenses, mode) => {
-  inquirer
+) => void = async (licensesNames, licenses, mode) => {
+  await inquirer
     .prompt({
       name: 'create-license',
       type: 'rawlist',

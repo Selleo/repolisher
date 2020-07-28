@@ -31,9 +31,9 @@ export const checkLabels = () => {
         default: 'Yes',
         suffix: '\n(ctrl + c to exit)'
       })
-      .then(answer => {
+      .then(async answer => {
         if (answer['labels-exist'] === CHOICES.ADD) {
-          addLabels()
+          return await addLabels()
         } else {
           return
         }
@@ -48,9 +48,9 @@ export const checkLabels = () => {
         default: 'Yes',
         suffix: '\n(ctrl + c to exit)'
       })
-      .then(answer => {
+      .then(async answer => {
         if (answer['labels-default'] === 'Yes') {
-          addLabels()
+          return await addLabels()
         }
       })
   }

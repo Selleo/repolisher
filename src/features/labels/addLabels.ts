@@ -3,9 +3,9 @@ import * as inquirer from 'inquirer'
 import { addSingleLabel } from './addSingleLabel'
 import { labelNamesTranslations } from './labelNamesTranslations'
 
-export const addLabels = () => {
+export const addLabels = async () => {
   const choices = [...Object.values(labelNamesTranslations)]
-  inquirer
+  await inquirer
     .prompt({
       name: 'create-label',
       type: 'checkbox',

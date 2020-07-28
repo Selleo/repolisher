@@ -4,10 +4,9 @@ import { findExistingLabels } from './findExistingLabels'
 import { addLabels } from './addLabels'
 
 export const checkLabels = () => {
-  const labels = findExistingLabels()
-  //TODO - labels
-  console.log('LABELS', labels)
-  const areLabelsInProject = !!labels.length
+  const existingLabels = findExistingLabels()
+  const areLabelsInProject = !!existingLabels.length
+
   const CHOICES = {
     ADD: 'Add Labels actions',
     CANCEL: 'Exit'
@@ -18,8 +17,6 @@ export const checkLabels = () => {
 
   const NOT_EXIST_MESSAGE =
     'You don`t have any labels actions configured, Would You like to add label actions now?'
-
-  console.log('ARE LABELS IN PROJECT', areLabelsInProject)
 
   if (areLabelsInProject) {
     return inquirer
@@ -57,4 +54,4 @@ export const checkLabels = () => {
 }
 
 //TODO remove checkLabels after release
-// checkLabels()
+checkLabels()

@@ -3,7 +3,7 @@ import * as inquirer from 'inquirer'
 import { addSingleLabel } from './addSingleLabel'
 import { labelNamesTranslations } from './labelNamesTranslations'
 
-export const addLabels = async () => {
+export const addLabels = async (mode: 'add' | 'edit') => {
   const choices = [...Object.values(labelNamesTranslations)]
   await inquirer
     .prompt({
@@ -16,6 +16,6 @@ export const addLabels = async () => {
     })
     .then(answer => {
       const pickedChoicesArr: string[] = answer['create-label']
-      pickedChoicesArr.forEach(pickedChoice => addSingleLabel(pickedChoice))
+      pickedChoicesArr.forEach(pickedChoice => addSingleLabel(pickedChoice, mode))
     })
 }

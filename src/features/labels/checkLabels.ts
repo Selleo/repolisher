@@ -8,12 +8,12 @@ export const checkLabels = () => {
   const areLabelsInProject = !!existingLabels.length
 
   const CHOICES = {
-    ADD: 'Add Labels actions',
-    CANCEL: 'Exit'
+    CANCEL: 'Leave it as it is',
+    EDIT: 'Restore Labels actions to default'
   }
 
   const EXIST_MESSAGE =
-    "'Labels has been found in this project, What would You like to do?'"
+    'Labels has been found in this project, What would You like to do?'
 
   const NOT_EXIST_MESSAGE =
     'You don`t have any labels actions configured, Would You like to add label actions now?'
@@ -29,8 +29,8 @@ export const checkLabels = () => {
         suffix: '\n(ctrl + c to exit)'
       })
       .then(async answer => {
-        if (answer['labels-exist'] === CHOICES.ADD) {
-          return await addLabels()
+        if (answer['labels-exist'] === CHOICES.EDIT) {
+          return await addLabels('edit')
         } else {
           return
         }
@@ -47,11 +47,8 @@ export const checkLabels = () => {
       })
       .then(async answer => {
         if (answer['labels-default'] === 'Yes') {
-          return await addLabels()
+          return await addLabels('add')
         }
       })
   }
 }
-
-//TODO remove checkLabels after release
-checkLabels()

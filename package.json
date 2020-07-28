@@ -1,6 +1,6 @@
 {
   "name": "repolisher",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "Robert Mrowiec @RobertMrowiec",
   "bin": {
     "repolisher": "./bin/run"

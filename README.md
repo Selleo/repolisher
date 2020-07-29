@@ -46,6 +46,7 @@ USAGE
 USAGE
   $ repolisher check
 ```
+![repolicher_check_3](https://user-images.githubusercontent.com/48966657/88813500-4aa98500-d1b9-11ea-9ffa-bf8e6a509814.gif)
 
 ## `repolisher help [COMMAND]`
 
@@ -68,6 +69,7 @@ OPTIONS
 USAGE
   $ repolisher init
 ```
+![repolisher_init_3](https://user-images.githubusercontent.com/48966657/88813504-4d0bdf00-d1b9-11ea-9b62-5a619ced3973.gif)
 
 ## `repolisher labels`
 

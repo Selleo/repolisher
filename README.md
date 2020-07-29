@@ -47,8 +47,6 @@ USAGE
   $ repolisher check
 ```
 
-_See code: [src/commands/check.ts](https://github.com/Selleo/repolisher/blob/v0.1.0/src/commands/check.ts)_
-
 ## `repolisher help [COMMAND]`
 
 display help for repolisher
@@ -64,8 +62,6 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
-
 ## `repolisher init`
 
 ```
@@ -73,16 +69,13 @@ USAGE
   $ repolisher init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.1.0/src/commands/init.ts)_
-
 ## `repolisher labels`
 
 ```
 USAGE
   $ repolisher labels
 ```
-
-_See code: [src/commands/labels.ts](https://github.com/Selleo/repolisher/blob/v0.1.0/src/commands/labels.ts)_
+![repolisher_labels_3](https://user-images.githubusercontent.com/48966657/88812893-8728b100-d1b8-11ea-87aa-cd6ec51d6c7a.gif)
 
 ## `repolisher license`
 
@@ -91,7 +84,7 @@ USAGE
   $ repolisher license
 ```
 
-_See code: [src/commands/license.ts](https://github.com/Selleo/repolisher/blob/v0.1.0/src/commands/license.ts)_
+![repolisher_license_3](https://user-images.githubusercontent.com/48966657/88812900-8a23a180-d1b8-11ea-8938-ac30d83b0f74.gif)
 
 ## `repolisher template-issue-default`
 
@@ -100,7 +93,7 @@ USAGE
   $ repolisher template-issue-default
 ```
 
-_See code: [src/commands/template-issue-default.ts](https://github.com/Selleo/repolisher/blob/v0.1.0/src/commands/template-issue-default.ts)_
+![repolisher_issue_3](https://user-images.githubusercontent.com/48966657/88812917-90198280-d1b8-11ea-9857-918b9db52148.gif)
 
 ## `repolisher template-pr`
 
@@ -109,7 +102,7 @@ USAGE
   $ repolisher template-pr
 ```
 
-_See code: [src/commands/template-pr.ts](https://github.com/Selleo/repolisher/blob/v0.1.0/src/commands/template-pr.ts)_
+![repolisher_pr_template_3](https://user-images.githubusercontent.com/48966657/88812908-8c85fb80-d1b8-11ea-809a-819cfe6ecdae.gif)
 <!-- commandsstop -->
 
 # repolisher

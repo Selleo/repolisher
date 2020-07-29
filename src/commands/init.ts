@@ -1,5 +1,10 @@
 import { Command } from '@oclif/command'
-import { checkPRTemplate, checkDefaultIssueTemplate, checkLicense } from '../common'
+import {
+  checkPRTemplate,
+  checkDefaultIssueTemplate,
+  checkLicense,
+  checkLabels
+} from '../common'
 import * as inquirer from 'inquirer'
 export default class Init extends Command {
   async run() {
@@ -12,6 +17,7 @@ export default class Init extends Command {
           'Setup PR Template',
           'Setup Default Issue Template',
           'Setup License',
+          'Setup Labels actions',
           'Finish'
         ]
       })
@@ -22,6 +28,8 @@ export default class Init extends Command {
           checkDefaultIssueTemplate()
         } else if (answer['what-to-do'] === 'Setup License') {
           checkLicense()
+        } else if (answer['what-to-do'] === 'Setup Labels actions') {
+          checkLabels()
         } else return this.log('tu nie')
       })
   }

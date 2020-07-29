@@ -21,7 +21,7 @@ $ npm install -g repolisher
 $ repolisher COMMAND
 running command...
 $ repolisher (-v|--version|version)
-repolisher/0.0.10 darwin-x64 node-v12.16.3
+repolisher/0.1.0 darwin-x64 node-v12.16.3
 $ repolisher --help [COMMAND]
 USAGE
   $ repolisher COMMAND
@@ -35,6 +35,7 @@ USAGE
 * [`repolisher check`](#repolisher-check)
 * [`repolisher help [COMMAND]`](#repolisher-help-command)
 * [`repolisher init`](#repolisher-init)
+* [`repolisher labels`](#repolisher-labels)
 * [`repolisher license`](#repolisher-license)
 * [`repolisher template-issue-default`](#repolisher-template-issue-default)
 * [`repolisher template-pr`](#repolisher-template-pr)
@@ -45,8 +46,7 @@ USAGE
 USAGE
   $ repolisher check
 ```
-
-_See code: [src/commands/check.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/check.ts)_
+![repolicher_check_3](https://user-images.githubusercontent.com/48966657/88813500-4aa98500-d1b9-11ea-9ffa-bf8e6a509814.gif)
 
 ## `repolisher help [COMMAND]`
 
@@ -63,16 +63,21 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
-
 ## `repolisher init`
 
 ```
 USAGE
   $ repolisher init
 ```
+![repolisher_init_3](https://user-images.githubusercontent.com/48966657/88813504-4d0bdf00-d1b9-11ea-9b62-5a619ced3973.gif)
 
-_See code: [src/commands/init.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/init.ts)_
+## `repolisher labels`
+
+```
+USAGE
+  $ repolisher labels
+```
+![repolisher_labels_3](https://user-images.githubusercontent.com/48966657/88812893-8728b100-d1b8-11ea-87aa-cd6ec51d6c7a.gif)
 
 ## `repolisher license`
 
@@ -81,7 +86,7 @@ USAGE
   $ repolisher license
 ```
 
-_See code: [src/commands/license.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/license.ts)_
+![repolisher_license_3](https://user-images.githubusercontent.com/48966657/88812900-8a23a180-d1b8-11ea-8938-ac30d83b0f74.gif)
 
 ## `repolisher template-issue-default`
 
@@ -90,7 +95,7 @@ USAGE
   $ repolisher template-issue-default
 ```
 
-_See code: [src/commands/template-issue-default.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/template-issue-default.ts)_
+![repolisher_issue_3](https://user-images.githubusercontent.com/48966657/88812917-90198280-d1b8-11ea-9857-918b9db52148.gif)
 
 ## `repolisher template-pr`
 
@@ -99,7 +104,7 @@ USAGE
   $ repolisher template-pr
 ```
 
-_See code: [src/commands/template-pr.ts](https://github.com/Selleo/repolisher/blob/v0.0.10/src/commands/template-pr.ts)_
+![repolisher_pr_template_3](https://user-images.githubusercontent.com/48966657/88812908-8c85fb80-d1b8-11ea-809a-819cfe6ecdae.gif)
 <!-- commandsstop -->
 
 # repolisher

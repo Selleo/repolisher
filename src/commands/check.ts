@@ -1,5 +1,10 @@
 import { Command } from '@oclif/command'
-import { checkPRTemplate, checkDefaultIssueTemplate, checkLicense } from '../common'
+import {
+  checkPRTemplate,
+  checkDefaultIssueTemplate,
+  checkLicense,
+  checkLabels
+} from '../common'
 
 export default class Check extends Command {
   async run() {
@@ -24,6 +29,11 @@ export default class Check extends Command {
         name: 'License',
         status: false,
         callback: checkLicense
+      },
+      {
+        name: 'Labels',
+        status: false,
+        callback: checkLabels
       }
     ]
 

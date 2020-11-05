@@ -21,7 +21,7 @@ $ npm install -g repolisher
 $ repolisher COMMAND
 running command...
 $ repolisher (-v|--version|version)
-repolisher/0.1.0 darwin-x64 node-v12.16.3
+repolisher/1.2.0 darwin-x64 node-v12.16.3
 $ repolisher --help [COMMAND]
 USAGE
   $ repolisher COMMAND

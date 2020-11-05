@@ -1,6 +1,6 @@
 {
   "name": "repolisher",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "author": "Robert Mrowiec @RobertMrowiec",
   "bin": {
     "repolisher": "./bin/run"
@@ -45,7 +45,7 @@
     "typescript": "^3.9.3"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=12.8.1"
   },
   "files": [
     "/bin",

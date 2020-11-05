@@ -6,6 +6,7 @@ import {
 } from './features/issueTemplate'
 import { findExistingDefaultLicenseTemplate, checkLicense } from './features/license'
 import { checkLabels } from './features/labels'
+import { checkRomeDefaults } from './features/rome-defaults'
 
 export {
   compareTemplates,
@@ -15,5 +16,6 @@ export {
   checkDefaultIssueTemplate,
   checkLicense,
   findExistingDefaultLicenseTemplate,
-  checkLabels
+  checkLabels,
+  checkRomeDefaults
 }

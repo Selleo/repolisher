@@ -107,6 +107,15 @@ USAGE
 ![repolisher_pr_template_3](https://user-images.githubusercontent.com/48966657/88812908-8c85fb80-d1b8-11ea-809a-819cfe6ecdae.gif)
 <!-- commandsstop -->
 
+## `repolisher rome-defaults`
+
+```
+USAGE
+  $ repolisher rome-defaults
+```
+
+![repolisher_rome_defaults](https://user-images.githubusercontent.com/25669684/99239155-f1fb0800-27fa-11eb-9705-80d3f7d7ef02.gif)
+
 # repolisher
 
 # Testing on development:

@@ -13,10 +13,13 @@
     "@octokit/request": "^5.4.5",
     "@types/glob": "^7.1.1",
     "@types/inquirer": "^6.5.0",
+    "@types/node-emoji": "^1.8.1",
+    "cli-table3": "^0.6.0",
     "colors": "^1.4.0",
     "diff": "^4.0.2",
     "glob": "^7.1.6",
     "inquirer": "^7.1.0",
+    "node-emoji": "^1.10.0",
     "path": "^0.12.7",
     "tslib": "^1.13.0"
   },

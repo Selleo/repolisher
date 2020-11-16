@@ -1,31 +1,36 @@
 import * as path from 'path'
 import * as fs from 'fs'
 
+import { LabelsNames, LabelStatus } from './models'
+import { checkIfFileIsLatestVersion } from '../../utils/utils'
+
 const directoryPath = path.join('.github', 'workflows')
+const templatesPath = path.join('src', 'files', 'labelTeamplates')
 
 export const findExistingLabels = () => {
-  let labelerFiles: string[] = []
-  const listFiles = (
-    directoryPath: string,
-    filter: RegExp,
-    callback: (a: string) => void
-  ) => {
-    if (!fs.existsSync(directoryPath)) {
-      console.log('no dir ', directoryPath)
-      return
-    }
+  const labelTemplates = fs.readdirSync(templatesPath)
+  const projectLabels = fs.existsSync(directoryPath) ? fs.readdirSync(directoryPath) : []
 
-    let files = fs.readdirSync(directoryPath)
-    for (let i = 0; i < files.length; i++) {
-      let filename = path.join(directoryPath, files[i])
-      let stat = fs.lstatSync(filename)
-      if (stat.isDirectory()) {
-        listFiles(filename, filter, callback) //recurse
-      } else if (filter.test(filename)) callback(filename)
-    }
-  }
+  const labelerFiles: LabelStatus[] = labelTemplates.map(label => {
+    const labelWithNoExtension = label.replace('.yml', '')
+    const projectLabelName = projectLabels.find(userLabels =>
+      userLabels.includes(labelWithNoExtension)
+    ) // in case of user files are .yaml, not .yml
 
-  const callbackFunction = (filename: string) => labelerFiles.push(filename)
-  listFiles(directoryPath, /\.*\-labeler.yml$|\.*\-labeler.yaml$/, callbackFunction)
+    const isLatest =
+      !!projectLabelName &&
+      checkIfFileIsLatestVersion(
+        path.join(directoryPath, projectLabelName),
+        path.join(templatesPath, label)
+      )
+
+    return {
+      exists: !!projectLabelName,
+      isLatest,
+      name: labelWithNoExtension as LabelsNames,
+      path: projectLabelName
+    }
+  })
+
   return labelerFiles
 }

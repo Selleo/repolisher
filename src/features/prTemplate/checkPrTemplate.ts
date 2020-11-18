@@ -19,7 +19,7 @@ export const checkPRTemplate = () => {
   prTemplates.forEach(file => {
     prTemplateExists = true
 
-    console.log('You already have PR template in Your repository')
+    console.log('You already have PR template in your repository')
     equal = compareTemplates(file, newTemplate, equal)
 
     if (equal) return console.log('No changes between actual and new template')
@@ -28,7 +28,7 @@ export const checkPRTemplate = () => {
       .prompt({
         name: 'template-pr',
         type: 'list',
-        message: 'Would You like to update a pull request template?',
+        message: 'Would you like to update a pull request template?',
         choices: ['Yes', 'No'],
         default: 'Yes',
         suffix: '\n(ctrl + c to exit)'
@@ -49,7 +49,7 @@ export const checkPRTemplate = () => {
       .prompt({
         name: 'template-pr',
         type: 'list',
-        message: 'You don`t have a Pull Request Template, Would You like to generate it?',
+        message: 'You don`t have a Pull Request Template, Would you like to generate it?',
         choices: ['Yes', 'No'],
         default: 'Yes',
         suffix: '\n(ctrl + c to exit)'

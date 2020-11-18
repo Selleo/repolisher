@@ -7,7 +7,7 @@ export const addLabel = (labelName: string) => {
   const templatePath = path.join('src', 'files', 'labelTeamplates', `${labelName}.yml`)
   const template = fs.readFileSync(templatePath, 'utf8')
 
-  fs.mkdirSync('.github/workflows', { recursive: true })
+  fs.mkdirSync(path.join('.github', 'workflows'), { recursive: true })
   fs.writeFile(
     path.join('.github', 'workflows', `${labelName}.yml`),
     template,

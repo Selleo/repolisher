@@ -19,7 +19,7 @@ export const checkLicense = async () => {
       .prompt({
         name: 'license-exist',
         type: 'list',
-        message: 'License found, Would You like to change License?',
+        message: 'License found, Would you like to change License?',
         choices: ['Yes', 'No'],
         default: 'Yes',
         suffix: '\n(ctrl + c to exit)'
@@ -35,7 +35,7 @@ export const checkLicense = async () => {
         name: 'license-default',
         type: 'list',
         message:
-          'You don`t have a License file attached to project, Would You like to generate it?',
+          'You don`t have a License file attached to project, Would you like to generate it?',
         choices: ['Yes', 'No'],
         default: 'Yes',
         suffix: '\n(ctrl + c to exit)'

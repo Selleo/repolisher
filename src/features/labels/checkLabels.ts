@@ -13,7 +13,7 @@ export const checkLabels = () => {
   const allLatest = labels.every(({ isLatest }) => isLatest)
 
   const EXIST_MESSAGE =
-    'Labels has been found in this project, What would You like to do?'
+    'Labels has been found in this project, What would you like to do?'
   const NOT_EXIST_MESSAGE =
     'You don`t have any labels actions configured, Would you like to add label actions now?'
   const CHOICES = {

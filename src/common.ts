@@ -1,4 +1,3 @@
-import { compareTemplates } from './features/common'
 import { findExistingPRTemplate, checkPRTemplate } from './features/prTemplate'
 import {
   findExistingDefaultIssueTemplate,
@@ -8,7 +7,6 @@ import { findExistingDefaultLicenseTemplate, checkLicense } from './features/lic
 import { checkLabels } from './features/labels'
 
 export {
-  compareTemplates,
   findExistingPRTemplate,
   findExistingDefaultIssueTemplate,
   checkPRTemplate,

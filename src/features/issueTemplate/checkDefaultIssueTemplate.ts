@@ -1,16 +1,31 @@
-import * as fs from 'fs'
+import * as inquirer from 'inquirer'
 
 import { findExistingDefaultIssueTemplate } from '../issueTemplate'
-import { newDefaultIssueTemplatePath } from '../../files/locateDefaultFile'
 import { createIssueTemplate } from './createIssueTemplate'
-import { updateIssueTemplate } from './updateIssueTemplate'
 
-export const checkDefaultIssueTemplate = () => {
-  const template = fs.readFileSync(newDefaultIssueTemplatePath, 'utf-8')
+export const checkDefaultIssueTemplate = async () => {
   const existingIssueTemplate = findExistingDefaultIssueTemplate()
 
-  if (!existingIssueTemplate.exists) return createIssueTemplate(template)
-  if (existingIssueTemplate.isLatest) return console.log('Your Default Issue template is up to date.')
+  if (existingIssueTemplate.isLatest)
+    return console.log('Your Default Issue template is up to date.')
 
-  return updateIssueTemplate(existingIssueTemplate.path, template)
+  const message = existingIssueTemplate.exists
+    ? 'Would you like to update a Default Issue Template?'
+    : 'You don`t have a Default Issue Template, Would you like to generate it?'
+
+  await inquirer
+    .prompt({
+      choices: ['Yes', 'No'],
+      default: 'Yes',
+      message,
+      name: 'template-issue-default',
+      suffix: '\n(ctrl + c to exit)',
+      type: 'list'
+    })
+    .then(answer => {
+      if (answer['template-issue-default'] === 'Yes') {
+        const mode = existingIssueTemplate.exists ? 'update' : 'create'
+        createIssueTemplate(mode, existingIssueTemplate.path)
+      }
+    })
 }

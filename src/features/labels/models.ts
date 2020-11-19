@@ -7,4 +7,5 @@ export type LabelStatus = {
   isLatest: boolean
   name: LabelsNames
   path?: string
+  type: 'labels-actions'
 }

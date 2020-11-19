@@ -1,4 +1,9 @@
 import { findExistingDefaultIssueTemplate } from './findExistingIssueTemplate'
 import { checkDefaultIssueTemplate } from './checkDefaultIssueTemplate'
+import { createIssueTemplate } from './createIssueTemplate'
 
-export { findExistingDefaultIssueTemplate, checkDefaultIssueTemplate }
+export {
+  checkDefaultIssueTemplate,
+  createIssueTemplate,
+  findExistingDefaultIssueTemplate
+}

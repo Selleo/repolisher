@@ -28,7 +28,8 @@ export const findExistingLabels = () => {
       exists: !!projectLabelName,
       isLatest,
       name: labelWithNoExtension as LabelsNames,
-      path: projectLabelName
+      path: projectLabelName ? path.join(directoryPath, projectLabelName) : undefined,
+      type: 'labels-actions'
     }
   })
 

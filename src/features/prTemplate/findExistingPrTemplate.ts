@@ -27,6 +27,7 @@ export const findExistingPRTemplate = () => {
     exists,
     isLatest,
     name: 'pr-template',
-    path: filePath
+    path: filePath,
+    type: 'pr-template' as const
   }
 }

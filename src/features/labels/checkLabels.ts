@@ -4,7 +4,6 @@ import * as Table from 'cli-table3'
 
 import { findExistingLabels } from './findExistingLabels'
 import { addLabels } from './addLabels'
-import { updateLabels } from './updateLabels'
 import { booleanToEmoji } from '../../utils/utils'
 
 export const checkLabels = () => {
@@ -42,7 +41,7 @@ export const checkLabels = () => {
         suffix: '\n(ctrl + c to exit)'
       })
       .then(async answer => {
-        if (answer['labels-default'] === 'Yes') return await addLabels()
+        if (answer['labels-default'] === 'Yes') return await addLabels(labels)
       })
 
   return inquirer
@@ -55,10 +54,7 @@ export const checkLabels = () => {
       suffix: `\n${labelsStatuses.toString()}\n(ctrl + c to exit)`
     })
     .then(async answer => {
-      if (answer['labels-exist'] === CHOICES.EDIT) {
-        return await updateLabels(labels)
-      } else {
-        return
-      }
+      if (answer['labels-exist'] === CHOICES.EDIT) return await addLabels(labels)
+      else return
     })
 }

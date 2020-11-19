@@ -1,15 +1,31 @@
-import * as fs from 'fs'
+import * as inquirer from 'inquirer'
 
 import { findExistingPRTemplate } from '../prTemplate'
-import { newPullRequestTemplatePath } from '../../files/locateDefaultFile'
-import { updatePrTemplate } from './updatePrTemplate'
 import { createPrTemplate } from './createPrTemplate'
 
-export const checkPRTemplate = () => {
-  const template = fs.readFileSync(newPullRequestTemplatePath, 'utf-8')
-  const existingPrTemplates = findExistingPRTemplate()
+export const checkPRTemplate = async () => {
+  const existingPrTemplate = findExistingPRTemplate()
 
-  if (!existingPrTemplates.exists) return createPrTemplate(template)
-  if (existingPrTemplates.isLatest) return console.log('Your default PR template is up to date.')
-  return updatePrTemplate(existingPrTemplates.path, template)
+  if (existingPrTemplate.isLatest)
+    return console.log('Your default PR template is up to date.')
+
+  const message = existingPrTemplate.exists
+    ? 'Would you like to update a Pull Request Template?'
+    : 'You don`t have a Pull Request Template, Would you like to generate it?'
+
+  await inquirer
+    .prompt({
+      name: 'template-pr',
+      type: 'list',
+      message,
+      choices: ['Yes', 'No'],
+      default: 'Yes',
+      suffix: '\n(ctrl + c to exit)'
+    })
+    .then(answer => {
+      if (answer['template-pr'] === 'Yes') {
+        const mode = existingPrTemplate.exists ? 'update' : 'create'
+        createPrTemplate(mode, existingPrTemplate.path)
+      }
+    })
 }

@@ -22,7 +22,7 @@ export const findExistingDefaultIssueTemplate = () => {
 
   if (existingIssueTemplates.length > 1)
     console.log(
-      `${emoji.get('warning')}You have duplicated default PR template located at:\n` +
+      `${emoji.get('warning')} You have duplicated Default Issue Template located at:\n` +
         existingIssueTemplates.join('\n')
     )
 
@@ -30,6 +30,7 @@ export const findExistingDefaultIssueTemplate = () => {
     exists,
     isLatest,
     name: 'default-issue-template',
-    path: filePath
+    path: filePath,
+    type: 'issue-template' as const
   }
 }

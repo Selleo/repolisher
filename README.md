@@ -105,6 +105,15 @@ USAGE
 ```
 
 ![repolisher_pr_template_3](https://user-images.githubusercontent.com/48966657/88812908-8c85fb80-d1b8-11ea-809a-819cfe6ecdae.gif)
+
+## `repolisher update`
+
+```
+USAGE
+  $ repolisher update
+```
+
+![repolisher_pr_template_3](https://user-images.githubusercontent.com/25669684/99676285-92aa2b80-2a78-11eb-92f0-d92975e8e06d.gif)
 <!-- commandsstop -->
 
 # repolisher

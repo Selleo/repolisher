@@ -21,6 +21,8 @@
     "tslib": "^1.13.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@oclif/dev-cli": "^1.22.2",
     "@oclif/test": "^1.2.6",
     "@types/chai": "^4.2.11",
@@ -36,6 +38,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "globby": "^10.0.2",
+    "husky": "^4.3.0",
     "mocha": "^7.2.0",
     "nyc": "^14.1.1",
     "ts-node": "^8.10.2",
@@ -63,6 +66,11 @@
     "plugins": [
       "@oclif/plugin-help"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "repository": "Selleo/repolisher",
   "scripts": {

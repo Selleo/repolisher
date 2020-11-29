@@ -12,9 +12,24 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "no-console": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
     "arrow-parens": "off",
+    "camelcase": "off",
+    "function-call-argument-newline": [1, "consistent"],
     "multiline-ternary": "off",
-    "function-call-argument-newline": ["2", "consistent"]
+    "no-await-in-loop": "off",
+    "no-console": "off",
+    "no-else-return": "off",
+    "no-implicit-coercion": "off",
+    "no-negated-condition": "off",
+    "no-return-await": "off",
+    "no-useless-escape": "off",
+    "no-useless-return": "off",
+    "prefer-const": "off",
+    "prettier/prettier": "off",
+    "spaced-comment": "off",
+    "unicorn/filename-case": "off"
   }
 }

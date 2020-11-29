@@ -2,14 +2,17 @@ import * as fs from 'fs'
 import * as inquirer from 'inquirer'
 import * as path from 'path'
 
-import { findLicenseKey, getLicenseText } from './licenseFunctions'
-import { LicenseType } from './models'
+import { findLicenseKey, getLicenses, getLicenseText } from './licenseFunctions'
 
-export const createLicenseFile: (
-  licensesNames: string[],
-  licenses: LicenseType[],
-  mode: 'generate' | 'update'
-) => void = async (licensesNames, licenses, mode) => {
+type Mode = 'create' | 'update'
+
+export const createLicenseFile = async (mode: Mode, filePath?: string) => {
+  const availableLicensesData = await getLicenses()
+  const licensesNames: string[] = availableLicensesData.data.map(license => license.name)
+
+  licensesNames.splice(licensesNames.indexOf('MIT License'), 1)
+  licensesNames.unshift('MIT License')
+
   await inquirer
     .prompt({
       name: 'create-license',
@@ -20,13 +23,14 @@ export const createLicenseFile: (
       suffix: '\n(ctrl + c to exit)'
     })
     .then(async answer => {
-      const licenseKey: string = findLicenseKey(licenses, answer)
+      const licenseKey: string = findLicenseKey(availableLicensesData.data, answer)
       const licenseText = await (await getLicenseText(licenseKey)).data.body
-      const text = mode === 'generate' ? 'generated' : 'updated'
-      fs.writeFile(path.join('LICENSE.md'), licenseText, 'utf-8', err => {
+      const writePath = filePath || path.join('LICENSE.md')
+
+      fs.writeFile(writePath, licenseText, 'utf-8', err => {
         return err
           ? console.log(`Error: ${err}`)
-          : console.log(`License file ${text} successfully`)
+          : console.log(`License file ${mode}d successfully`)
       })
     })
 }

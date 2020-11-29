@@ -78,12 +78,12 @@ export default class Update extends Command {
       .prompt({
         choices: choices,
         message: 'Choose to what workflow you want add labels',
-        name: 'update-label',
+        name: 'update',
         suffix: '\n(ctrl + c to exit)',
         type: 'checkbox'
       })
       .then(answer => {
-        const pickedChoicesArr = answer['update-label']
+        const pickedChoicesArr = answer['update']
         pickedChoicesArr.forEach((pickedChoice: string) => {
           const selectedLabel = choices.find(({ value }) => value === pickedChoice)
           selectedLabel?.callback()

@@ -105,6 +105,15 @@ USAGE
 ```
 
 ![repolisher_pr_template_3](https://user-images.githubusercontent.com/48966657/88812908-8c85fb80-d1b8-11ea-809a-819cfe6ecdae.gif)
+
+## `repolisher commit-lint`
+
+```
+USAGE
+  $ repolisher commit-lint
+```
+
+![repolisher_commit_lint](https://user-images.githubusercontent.com/25669684/100544384-921e4b80-3255-11eb-9653-3c6f540a2077.gif)
 <!-- commandsstop -->
 
 # repolisher
